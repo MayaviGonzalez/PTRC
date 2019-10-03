@@ -22,6 +22,7 @@ public class Libro {
         this.numeroejemplaresprestados = numeroejemplaresprestados;
     }
 
+    //creamos los get y set
     public String getTitulo() {
         return titulo;
     }
