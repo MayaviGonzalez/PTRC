@@ -54,6 +54,12 @@ public class Libro {
     public void setNumeroejemplaresprestados(int numeroejemplaresprestados) {
         this.numeroejemplaresprestados = numeroejemplaresprestados;
     }
+
+    
+    @Override
+    public String toString() {
+        return "Libro{" + "titulo=" + titulo + ", autor=" + autor + ", numeroejemplaresexistentes=" + numeroejemplaresexistentes + ", numeroejemplaresprestados=" + numeroejemplaresprestados + '}';
+    }
     
     
 }
