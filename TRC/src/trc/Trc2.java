@@ -5,6 +5,8 @@
  */
 package trc;
 
+import java.awt.Color;
+
 /**
  *
  * @author 18PROGB0128
@@ -16,6 +18,7 @@ public class Trc2 extends javax.swing.JFrame {
      */
     public Trc2() {
         initComponents();
+        this.getContentPane().setBackground(Color.ORANGE);
     }
 
     /**
