@@ -6,6 +6,7 @@
 package trc;
 
 import java.awt.Color;
+import javax.swing.JFrame;
 
 /**
  *
@@ -19,6 +20,7 @@ public class fermentacion extends javax.swing.JFrame {
     public fermentacion() {
         initComponents();
         this.getContentPane().setBackground(Color.orange);
+        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
     }
 
     /**
@@ -32,21 +34,24 @@ public class fermentacion extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        btnPantalllaincial = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Fermentaciòn");
         setResizable(false);
 
         jTextArea1.setColumns(20);
+        jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Informacion sobre la fermentación");
+        jTextArea1.setText("•Fermentación Láctica: Es realizado por algunas bacterias; la célula muscular cuando está en deuda de oxígeno y glóbulos rojos. Produce 2 moléculas de ácido láctico y 2 ATP como ganancia neta a partir de una molécula de glucosa.\n\n•Fermentación Alcohólica: Se lleva a cabo en las levaduras (hongos unicelulares) es la base de la producción de la cerveza, vino y otras bebidas alcohólicas. Además la producción de CO2 es aprovechado en la industria panadera para hacer que la masa se levante . da lugar a 2 moléculas de alcohol etílico más dos moléculas de dióxido de carbono y una ganancia neta de 2 ATP a partir de una molécula de glucosa.\nEn esta vía diferencia de la anterior en 2 pasos adicionales, cada piruvato se transforma en etanol; en el primero, el piruvato por una reacción de descarboxilación se transforma en acetaldehído liberándose una molécula de CO2.\n");
+        jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jButton1.setText("SALIR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnPantalllaincial.setText("Pantalla Inicial");
+        btnPantalllaincial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnPantalllaincialActionPerformed(evt);
             }
         });
 
@@ -60,33 +65,35 @@ public class fermentacion extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 320, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1)))
-                .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 320, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(139, 139, 139)
+                        .addComponent(btnPantalllaincial)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(81, 81, 81)
+                        .addComponent(btnPantalllaincial)))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnPantalllaincialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPantalllaincialActionPerformed
+       System.exit(0);
+    }//GEN-LAST:event_btnPantalllaincialActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,7 +131,7 @@ public class fermentacion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnPantalllaincial;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;

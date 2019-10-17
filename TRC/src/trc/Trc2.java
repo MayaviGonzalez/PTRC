@@ -6,6 +6,7 @@
 package trc;
 
 import java.awt.Color;
+import javax.swing.JFrame;
 
 /**
  *
@@ -19,7 +20,9 @@ public class Trc2 extends javax.swing.JFrame {
     public Trc2() {
         initComponents();
         this.getContentPane().setBackground(Color.ORANGE);
+        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -35,22 +38,24 @@ public class Trc2 extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jButton2 = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
+        rbAnaerobica = new javax.swing.JRadioButton();
+        rbAerobica = new javax.swing.JRadioButton();
+        btnSALIR = new javax.swing.JButton();
+        rbfermentacion = new javax.swing.JRadioButton();
+        jButton1 = new javax.swing.JButton();
 
         jMenu1.setText("jMenu1");
 
         jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Tipos De Respiracion Celular");
         setResizable(false);
 
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Cuadro de texto donde se hablara de los tipos de respiracion celular");
+        jTextArea1.setText("La respiración celular o respiración interna es el conjunto de reacciones bioquímicas por las cuales determinados compuestos orgánicos son degradados completamente, por oxidación, hasta convertirse en sustancias inorgánicas, proceso que proporciona energía aprovechable por la célula (principalmente en forma de ATP).\n\nSon oxidaciones biológicas de los compuestos orgánicos, principalmente de la molécula de glucosa que realiza la célula con la finalidad de obtener, liberar y almacenar energía bajo la forma de ATP.\n");
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
@@ -58,18 +63,30 @@ public class Trc2 extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagen004.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
 
-        jRadioButton3.setText("Anaerobica");
-
-        jRadioButton4.setText("Aerobica");
-
-        jButton2.setText("SALIR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        rbAnaerobica.setText("Anaerobica");
+        rbAnaerobica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                rbAnaerobicaActionPerformed(evt);
             }
         });
 
-        jRadioButton1.setText("Fermentación");
+        rbAerobica.setText("Aerobica");
+
+        btnSALIR.setText("SALIR");
+        btnSALIR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSALIRActionPerformed(evt);
+            }
+        });
+
+        rbfermentacion.setText("Fermentación");
+
+        jButton1.setText("Integrantes");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -77,18 +94,20 @@ public class Trc2 extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jRadioButton4)
-                                .addComponent(jRadioButton1))
-                            .addGap(292, 292, 292))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jRadioButton3)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton2)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(rbAnaerobica)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnSALIR))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rbfermentacion)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(rbAerobica)
+                                .addGap(95, 95, 95)
+                                .addComponent(jButton1))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(16, 16, 16)))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -99,15 +118,17 @@ public class Trc2 extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(43, 43, 43)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(rbAnaerobica)
+                            .addComponent(btnSALIR))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioButton3)
-                            .addComponent(jButton2))
+                            .addComponent(rbAerobica)
+                            .addComponent(jButton1))
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton4)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButton1))
+                        .addComponent(rbfermentacion))
                     .addComponent(jLabel2))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
@@ -115,9 +136,17 @@ public class Trc2 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnSALIRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSALIRActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btnSALIRActionPerformed
+
+    private void rbAnaerobicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbAnaerobicaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_rbAnaerobicaActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,14 +184,15 @@ public class Trc2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnSALIR;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JRadioButton rbAerobica;
+    private javax.swing.JRadioButton rbAnaerobica;
+    private javax.swing.JRadioButton rbfermentacion;
     // End of variables declaration//GEN-END:variables
 }
