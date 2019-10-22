@@ -105,12 +105,15 @@
       <SubComponents>
         <Component class="javax.swing.JTextArea" name="jTextArea1">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="columns" type="int" value="20"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Calibri" size="18" style="2"/>
+            </Property>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="La respiraci&#xf3;n celular o respiraci&#xf3;n interna es el conjunto de reacciones bioqu&#xed;micas por las cuales determinados compuestos org&#xe1;nicos son degradados completamente, por oxidaci&#xf3;n, hasta convertirse en sustancias inorg&#xe1;nicas, proceso que proporciona energ&#xed;a aprovechable por la c&#xe9;lula (principalmente en forma de ATP).&#xa;&#xa;Son oxidaciones biol&#xf3;gicas de los compuestos org&#xe1;nicos, principalmente de la mol&#xe9;cula de glucosa que realiza la c&#xe9;lula con la finalidad de obtener, liberar y almacenar energ&#xed;a bajo la forma de ATP.&#xa;"/>
+            <Property name="text" type="java.lang.String" value="RESPIRACI&#xd3;N CELULAR.&#xa;&#xa;La respiraci&#xf3;n celular o respiraci&#xf3;n interna es el conjunto de reacciones bioqu&#xed;micas por las cuales determinados compuestos org&#xe1;nicos son degradados completamente, por oxidaci&#xf3;n, hasta convertirse en sustancias inorg&#xe1;nicas, proceso que proporciona energ&#xed;a aprovechable por la c&#xe9;lula (principalmente en forma de ATP).&#xa;&#xa;Son oxidaciones biol&#xf3;gicas de los compuestos org&#xe1;nicos, principalmente de la mol&#xe9;cula de glucosa que realiza la c&#xe9;lula con la finalidad de obtener, liberar y almacenar energ&#xed;a bajo la forma de ATP.&#xa;"/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
-            <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -135,6 +138,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Aerobica"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbAerobicaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnSALIR">
       <Properties>
@@ -148,6 +154,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Fermentaci&#xf3;n"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbfermentacionActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>

@@ -39,12 +39,15 @@ public class fermentacion extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Fermentaciòn");
+        setEnabled(false);
         setResizable(false);
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Calibri", 2, 18)); // NOI18N
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("•Fermentación Láctica: Es realizado por algunas bacterias; la célula muscular cuando está en deuda de oxígeno y glóbulos rojos. Produce 2 moléculas de ácido láctico y 2 ATP como ganancia neta a partir de una molécula de glucosa.\n\n•Fermentación Alcohólica: Se lleva a cabo en las levaduras (hongos unicelulares) es la base de la producción de la cerveza, vino y otras bebidas alcohólicas. Además la producción de CO2 es aprovechado en la industria panadera para hacer que la masa se levante . da lugar a 2 moléculas de alcohol etílico más dos moléculas de dióxido de carbono y una ganancia neta de 2 ATP a partir de una molécula de glucosa.\nEn esta vía diferencia de la anterior en 2 pasos adicionales, cada piruvato se transforma en etanol; en el primero, el piruvato por una reacción de descarboxilación se transforma en acetaldehído liberándose una molécula de CO2.\n");
+        jTextArea1.setText("FERMENTACION.\nProceso bioquímico por el que una sustancia orgánica se transforma en otra, generalmente más simple, por la acción de un fermento.\n\nTIPOS DE FERMENTACION:\n• Fermentación alcohólica. Bajo dicha denominación se encuentra el proceso consistente en otorgar a las levaduras energía anaeróbica en ausencia de oxígeno y a partir de la glucosa. El vino, el arroz, la cerveza o incluso la leche se pueden obtener mediante este procedimiento que puede ser, a su vez, de dos clases: natural o industrial.\n• Fermentación láctica. En este caso, hay que exponer que en ella juegan un papel fundamental las bacterias y la glucosa. Y es que las primeras son las que llevan a cabo este proceso en el que se oxida la lactosa de manera parcial para obtener energía. Un claro ejemplo de dicha iniciativa es la acidificación de la leche.\n• Fermentación acética. En este otro caso, lo que sucede es que unas bacterias de tipo aeróbico se encargan de transformar el llamado alcohol etílico en lo que es ácido acético.\n• Fermentación ferrolaica pcb.\n• Fermentación butírica. Este otro proceso hay que destacar que se define por ser aquel en el que, ante la ausencia de oxígeno, las bacterias «Clostridium butyricum», las amilobacterias, convierten lo que son los glúcidos en ácido butírico. \n\n");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
 
@@ -65,9 +68,9 @@ public class fermentacion extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 320, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
@@ -79,8 +82,8 @@ public class fermentacion extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addGap(81, 81, 81)
@@ -92,7 +95,7 @@ public class fermentacion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnPantalllaincialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPantalllaincialActionPerformed
-       System.exit(0);
+       dispose();
     }//GEN-LAST:event_btnPantalllaincialActionPerformed
 
     /**

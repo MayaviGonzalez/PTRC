@@ -52,12 +52,13 @@ public class Trc2 extends javax.swing.JFrame {
         setTitle("Tipos De Respiracion Celular");
         setResizable(false);
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Calibri", 2, 18)); // NOI18N
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("La respiración celular o respiración interna es el conjunto de reacciones bioquímicas por las cuales determinados compuestos orgánicos son degradados completamente, por oxidación, hasta convertirse en sustancias inorgánicas, proceso que proporciona energía aprovechable por la célula (principalmente en forma de ATP).\n\nSon oxidaciones biológicas de los compuestos orgánicos, principalmente de la molécula de glucosa que realiza la célula con la finalidad de obtener, liberar y almacenar energía bajo la forma de ATP.\n");
+        jTextArea1.setText("RESPIRACIÓN CELULAR.\n\nLa respiración celular o respiración interna es el conjunto de reacciones bioquímicas por las cuales determinados compuestos orgánicos son degradados completamente, por oxidación, hasta convertirse en sustancias inorgánicas, proceso que proporciona energía aprovechable por la célula (principalmente en forma de ATP).\n\nSon oxidaciones biológicas de los compuestos orgánicos, principalmente de la molécula de glucosa que realiza la célula con la finalidad de obtener, liberar y almacenar energía bajo la forma de ATP.\n");
         jTextArea1.setWrapStyleWord(true);
-        jTextArea1.setEnabled(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imagen004.jpg"))); // NOI18N
@@ -71,6 +72,11 @@ public class Trc2 extends javax.swing.JFrame {
         });
 
         rbAerobica.setText("Aerobica");
+        rbAerobica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbAerobicaActionPerformed(evt);
+            }
+        });
 
         btnSALIR.setText("SALIR");
         btnSALIR.addActionListener(new java.awt.event.ActionListener() {
@@ -80,6 +86,11 @@ public class Trc2 extends javax.swing.JFrame {
         });
 
         rbfermentacion.setText("Fermentación");
+        rbfermentacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbfermentacionActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Integrantes");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -141,12 +152,33 @@ public class Trc2 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSALIRActionPerformed
 
     private void rbAnaerobicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbAnaerobicaActionPerformed
-        // TODO add your handling code here:
+        rbfermentacion.setSelected(false);
+        rbAerobica.setSelected(false);
+
+        Anaerobica frm = new Anaerobica();
+        frm.setVisible(true);
     }//GEN-LAST:event_rbAnaerobicaActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+       Integrantes frm = new Integrantes();
+       frm.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void rbAerobicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbAerobicaActionPerformed
+        rbfermentacion.setSelected(false);
+        rbAnaerobica.setSelected(false);
+        
+
+        Aerobica frm = new Aerobica();
+        frm.setVisible(true);
+    }//GEN-LAST:event_rbAerobicaActionPerformed
+
+    private void rbfermentacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbfermentacionActionPerformed
+        rbAerobica.setSelected(false);
+        
+        fermentacion frm = new fermentacion ();
+      frm.setVisible(true);
+    }//GEN-LAST:event_rbfermentacionActionPerformed
 
     /**
      * @param args the command line arguments

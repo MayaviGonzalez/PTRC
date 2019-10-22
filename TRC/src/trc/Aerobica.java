@@ -42,10 +42,12 @@ public class Aerobica extends javax.swing.JFrame {
         setTitle("Aerobica");
         setResizable(false);
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Calibri", 2, 18)); // NOI18N
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Respiración aeróbica. \n\nEl aceptor final de electrones es el oxígeno molecular, que se reduce a agua. La realizan la inmensa mayoría de organismos, incluidos los humanos. Los organismos que llevan a cabo este tipo de respiración reciben el nombre de organismos aeróbicos.");
+        jTextArea1.setText("RESPIRACIÓN AEROBICA.\n\nEs aquel tipo de respiración que requiere de oxigeno molecular, puede llegar a producir hasta 38 moléculas de ATP. Se inicia en el citosol y culmina en las mitocondrias. \n\nComprende tres etapas: \n    1) Glucolisis\n    2) Ciclo de Krebs \n    3) Cadena de respiración.\n");
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
 
@@ -92,7 +94,7 @@ public class Aerobica extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnPantallaInicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPantallaInicialActionPerformed
-        System.exit(0);
+        dispose();
     }//GEN-LAST:event_btnPantallaInicialActionPerformed
 
     /**

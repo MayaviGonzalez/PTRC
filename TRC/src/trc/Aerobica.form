@@ -69,10 +69,14 @@
       <SubComponents>
         <Component class="javax.swing.JTextArea" name="jTextArea1">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="columns" type="int" value="20"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Calibri" size="18" style="2"/>
+            </Property>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Respiraci&#xf3;n aer&#xf3;bica. &#xa;&#xa;El aceptor final de electrones es el ox&#xed;geno molecular, que se reduce a agua. La realizan la inmensa mayor&#xed;a de organismos, incluidos los humanos. Los organismos que llevan a cabo este tipo de respiraci&#xf3;n reciben el nombre de organismos aer&#xf3;bicos."/>
+            <Property name="text" type="java.lang.String" value="RESPIRACI&#xd3;N AEROBICA.&#xa;&#xa;Es aquel tipo de respiraci&#xf3;n que requiere de oxigeno molecular, puede llegar a producir hasta 38 mol&#xe9;culas de ATP. Se inicia en el citosol y culmina en las mitocondrias. &#xa;&#xa;Comprende tres etapas: &#xa;    1) Glucolisis&#xa;    2) Ciclo de Krebs &#xa;    3) Cadena de respiraci&#xf3;n.&#xa;"/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
           </Properties>
         </Component>
