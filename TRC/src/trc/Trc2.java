@@ -42,7 +42,7 @@ public class Trc2 extends javax.swing.JFrame {
         rbAerobica = new javax.swing.JRadioButton();
         btnSALIR = new javax.swing.JButton();
         rbfermentacion = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
+        btnIntegrantes = new javax.swing.JButton();
 
         jMenu1.setText("jMenu1");
 
@@ -92,10 +92,10 @@ public class Trc2 extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Integrantes");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnIntegrantes.setText("Integrantes");
+        btnIntegrantes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnIntegrantesActionPerformed(evt);
             }
         });
 
@@ -116,7 +116,7 @@ public class Trc2 extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(rbAerobica)
                                 .addGap(95, 95, 95)
-                                .addComponent(jButton1))
+                                .addComponent(btnIntegrantes))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(16, 16, 16)))
                 .addGap(18, 18, 18)
@@ -137,7 +137,7 @@ public class Trc2 extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(rbAerobica)
-                            .addComponent(jButton1))
+                            .addComponent(btnIntegrantes))
                         .addGap(18, 18, 18)
                         .addComponent(rbfermentacion))
                     .addComponent(jLabel2))
@@ -159,10 +159,10 @@ public class Trc2 extends javax.swing.JFrame {
         frm.setVisible(true);
     }//GEN-LAST:event_rbAnaerobicaActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       Integrantes frm = new Integrantes();
+    private void btnIntegrantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIntegrantesActionPerformed
+        Integrantes frm = new Integrantes();
        frm.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnIntegrantesActionPerformed
 
     private void rbAerobicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbAerobicaActionPerformed
         rbfermentacion.setSelected(false);
@@ -216,8 +216,8 @@ public class Trc2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnIntegrantes;
     private javax.swing.JButton btnSALIR;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem1;

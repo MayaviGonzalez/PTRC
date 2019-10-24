@@ -43,7 +43,7 @@ public class Integrantes extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Mayavi Gonzales Ornelas.\nJuan Pablo Chavez Medina.\nJorge jahir Gaona DeLa Cruz.");
+        jTextArea1.setText("Mayavi Gonzales Ornelas.\nJuan Pablo Chavez Medina.\nJorge Jahir Gaona DeLa Cruz.");
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setText("Pantalla Inicial");
